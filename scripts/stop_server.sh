@@ -1,3 +1,5 @@
 #!/bin/bash
-sudo pkill -f gunicorn
+# Stop the server gracefully
+sudo pkill -f gunicorn || true
+echo "Server stopped"
 exit 0

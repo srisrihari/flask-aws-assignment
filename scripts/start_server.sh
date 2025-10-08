@@ -1,4 +1,8 @@
 #!/bin/bash
+set -e
 cd /home/ec2-user/flask-app
-sudo pkill -f gunicorn
-nohup sudo gunicorn --bind 0.0.0.0:80 app:app --workers 3 > /dev/null 2>&1 &
+# Kill any existing gunicorn processes
+sudo pkill -f gunicorn || true
+# Start the application
+sudo gunicorn --bind 0.0.0.0:80 app:app --daemon --workers 3
+echo "Application started successfully"
