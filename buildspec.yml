@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo Installing dependencies...
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+  
+  pre_build:
+    commands:
+      - echo Pre-build phase started on `date`
+  
+  build:
+    commands:
+      - echo Build phase started on `date`
+      - echo Running tests if any...
+  
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+  name: flask-app-build

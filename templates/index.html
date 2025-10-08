@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Assignment - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Cloud Computing Assignment</h1>
+        <h2>Python Flask App on AWS EC2</h2>
+        
+        <div class="info-box">
+            <span class="label">Server Hostname:</span> {{ hostname }}
+        </div>
+        
+        <div class="info-box">
+            <span class="label">EC2 Instance ID:</span> {{ instance_id }}
+        </div>
+        
+        <div class="info-box">
+            <span class="label">Current Time:</span> {{ current_time }}
+        </div>
+        
+        <div class="info-box">
+            <span class="label">Application Status:</span> ✅ Running Successfully
+        </div>
+        
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/health">Health Check</a>
+        </nav>
+        
+        <p style="text-align: center; margin-top: 30px;">
+            This application is deployed using AWS CI/CD Pipeline<br>
+            Course: INUX214 - Cloud Computing
+        </p>
+    </div>
+</body>
+</html>
